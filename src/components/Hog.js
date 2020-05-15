@@ -17,15 +17,10 @@ class Hog extends Component {
     render(){
         let pigImg = require(`../hog-imgs/${this.props.hog.name.toLowerCase().replace(" ","_").replace(" ","_")}.jpg`)
         return(
-            <div className="ui eight wide column" className="ui card" className="hog-card">
-                <div className="image" >
+            <div className="ui eight wide column">
                     <img onClick={() => {this.props.showDetail(this.props.hog)} } src={pigImg} />
-                </div>
-                <div className="content">
-                    <a className="header">{this.props.hog.name}</a>
+                    <h2>{this.props.hog.name}</h2>
                     <button onClick={() => {this.props.renderWithoutHidden(this.props.hog)}}>Hide Pig</button> 
-                </div>
-
             </div>
         )
     }

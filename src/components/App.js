@@ -36,6 +36,7 @@ class App extends Component {
 
   renderAll = () => {
     this.setState({pigs: porkersData})
+    this.setState({clickedPig: null})
   }
 
   renderWithoutHidden = (hog) => {
